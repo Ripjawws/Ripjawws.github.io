@@ -11,13 +11,6 @@ window.onload = function() {
         cartElement.appendChild(productElement);
     }
     else {
-        // cart.forEach(product => {
-        //     let productElement = document.createElement('li');
-        //     productElement.textContent = `Product ID: ${product.id}, Product Name: ${product.title}, Product Price: ${product.price}`;
-        //     cartElement.appendChild(productElement);
-        // });
-        // Add image as well next to the product name
-        // create a list of products in the cart and separte them in two columns
         cart.forEach(product => {
             let productElement = document.createElement('li');
             productElement.className = 'list-group-item d-flex justify-content-between lh-condensed';
