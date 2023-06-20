@@ -1,0 +1,215 @@
+/* Reset some browser styles */
+body, ul, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #D3CFC5;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 10px;
+}
+
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .header-image {
+    max-width: 3%;
+    max-height: 104px; 
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Style the navigation bar */
+#navbar {
+    list-style-type: none;
+    background-color: #D3CFC5;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li a {
+    display: block;
+    color: #7D8F65;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #7D8F65;
+    color: #fff;
+}
+
+/* Main content styles */
+main {
+    flex-grow: 1;
+}
+
+.publitas-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+    margin: 20px 0;
+}
+
+.publitas-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Add this to your existing CSS file */
+
+/* Cart Modal */
+.cart-modal {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #D3CFC5;
+}
+
+.cart-modal h2 {
+    margin-bottom: 20px;
+}
+
+.cart-items-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 400px; /* Adjust this value based on your iframe size */
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-button {
+    background-color: #7D8F65;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout-button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Add this to your existing CSS file */
+
+/* Checkout Modal */
+.checkout-modal {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #D3CFC5;
+}
+
+.checkout-modal h2 {
+    margin-bottom: 20px;
+}
+
+.checkout-modal form {
+    width: 100%;
+}
+
+.checkout-modal label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px 0;
+}
+
+.checkout-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.checkout-modal .checkout-button {
+    background-color: #7D8F65;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #7D8F65;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}

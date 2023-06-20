@@ -1,0 +1,47 @@
+<script>
+    window.viewerReady = function (api, platform) {
+    
+        const retrieveCartFromStorage = () => JSON.parse(localStorage.getItem('cart')) || [];
+        
+        const updateCartIconCount = () => {
+            const cart = retrieveCartFromStorage();
+            api.cartContentChanged({ numItems: cart.length });
+        }
+    
+        const addProductToCart = (product) => {
+            const cart = retrieveCartFromStorage();
+            cart.push({ title: product.title, description: product.description, price: product.price});
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartIconCount();
+        }
+    
+        const displayContentInModal = (url) => {
+            const options = { background: '#ffffff' };
+            api.showExternalContent(url, options);
+        }
+    
+      api.addMenuItem({
+        name: 'Empty Cart',
+        title: 'Empty Cart',
+        iconUrl: "https://www.clipartmax.com/png/middle/221-2218547_empty-shopping-cart-icon.png",
+        action: function(){
+          localStorage.removeItem('cart');
+          updateCartIconCount()
+        },
+        order: 2,
+      });
+    
+        api.setProductCtaAction(addProductToCart);
+        
+        api.setCartButtonAction(() => {
+            const cart = retrieveCartFromStorage();
+            const url = `http://127.0.0.1:5500/cart.html?cart=${encodeURIComponent(JSON.stringify(cart))}`;
+            const options = {
+                background: '#D3CFC5'
+            };
+            api.showExternalContent(url, options);
+        });
+    
+        updateCartIconCount();
+    };
+    </script>
